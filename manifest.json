@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Life Log",
+  "version": "1.0.0",
+  "description": "Automatically log your web browsing history for better life tracking",
+  "permissions": ["history", "tabs", "storage", "alarms"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Life Log"
+  },
+  "options_page": "options.html"
+}

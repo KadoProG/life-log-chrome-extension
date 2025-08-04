@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Log - 設定</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Life Log 設定</h1>
+    </header>
+
+    <div class="content">
+      <div class="section">
+        <h2 class="section-title">一般設定</h2>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">自動記録</label>
+            <div class="setting-description">Webページの訪問を自動的に記録します</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="autoLoggingToggle" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">データ管理</h2>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">データのエクスポート</label>
+            <div class="setting-description">記録されたデータをCSVファイルとしてダウンロードします</div>
+          </div>
+          <button class="btn btn-primary" id="exportBtn">エクスポート</button>
+        </div>
+        
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">データの削除</label>
+            <div class="setting-description">すべての記録データを削除します（復元できません）</div>
+          </div>
+          <button class="btn btn-danger" id="clearDataBtn">削除</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">統計情報</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" id="totalEntries">0</div>
+            <div class="stat-label">総記録数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="todayEntries">0</div>
+            <div class="stat-label">今日の記録</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="uniqueDomains">0</div>
+            <div class="stat-label">訪問ドメイン数</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">最近の履歴</h2>
+        <div class="history-container">
+          <div class="history-list" id="historyList">
+            <div class="loading">読み込み中...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html> 
